@@ -1,0 +1,31 @@
+#include <iostream>
+#include <thread>
+#include<fstream>
+#include<conio.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+void hilo(){
+	int con=0;
+	std::ofstream outfile("primo.txt");
+	 if (con==2){
+	outfile<<"Es manaba digo primo xd"<< std::endl;
+}
+else {
+outfile<<"No es manaba digo primo xd"<< std::endl;
+}
+	outfile.close();
+}
+int main(){
+	int num,i,con=0;
+    printf ("Ingrese un numero: ");
+    scanf ("%i",&num);
+     for (i=1; i <=num; i++){
+        if (num%i==0){
+            con++;
+        }
+    }
+std::thread prueba(hilo);
+prueba.join();
+getch();
+}
