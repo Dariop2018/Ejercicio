@@ -1,14 +1,10 @@
-#include <iostream>
-#include <thread>
-#include<fstream>
-#include<conio.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 void hilo(){
 	int con=0,num,i;
-	std::ofstream outfile("primo.txt");
-	    printf ("Ingrese un numero: ");
+	std::ofstream outfile("NUMEROPRIMO.txt");
+	    printf ("INGRESE UN NUMERO: ");
     scanf ("%i",&num);
 	     for (i=1; i <=num; i++){
         if (num%i==0){
@@ -16,10 +12,10 @@ void hilo(){
         }
     }
 	 if (con==2){
-	outfile<<"El numero %i es primo"<< std::endl;
+	outfile<<"El numero INGRESADO  es primo KP"<< std::endl;
 }
 else {
-outfile<<"El numero %i no es primo"<< std::endl;
+outfile<<"El numero INGRESADO no es primo KP"<< std::endl;
 }
 	outfile.close();
 }
