@@ -6,25 +6,24 @@
 #include <stdlib.h>
 
 void hilo(){
-	int con=0;
+	int con=0,num,i;
 	std::ofstream outfile("primo.txt");
-	 if (con==2){
-	outfile<<"Es manaba digo primo xd"<< std::endl;
-}
-else {
-outfile<<"No es manaba digo primo xd"<< std::endl;
-}
-	outfile.close();
-}
-int main(){
-	int num,i,con=0;
-    printf ("Ingrese un numero: ");
+	    printf ("Ingrese un numero: ");
     scanf ("%i",&num);
-     for (i=1; i <=num; i++){
+	     for (i=1; i <=num; i++){
         if (num%i==0){
             con++;
         }
     }
+	 if (con==2){
+	outfile<<"El numero %i es primo"<< std::endl;
+}
+else {
+outfile<<"El numero %i no es primo"<< std::endl;
+}
+	outfile.close();
+}
+int main(){
 std::thread prueba(hilo);
 prueba.join();
 getch();
