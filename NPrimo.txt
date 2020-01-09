@@ -16,10 +16,10 @@ void hilo(){
         }
     }
 	 if (con==2){
-	outfile<<"El numero %i es primo"<< std::endl;
+	outfile<<"El numero es primo"<< std::endl;
 }
 else {
-outfile<<"El numero %i no es primo"<< std::endl;
+outfile<<"El numero no es primo"<< std::endl;
 }
 	outfile.close();
 }
