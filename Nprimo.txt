@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <thread>
 #include<fstream>
 #include<conio.h>
@@ -16,10 +16,10 @@ void hilo(){
         }
     }
 	 if (con==2){
-	outfile<<"El número que ingreso es primo"<< std::endl;
+	outfile<<"El número ingresado es primo"<< std::endl;
 }
 else {
-outfile<<"El número que ingreso no es primo"<< std::endl;
+outfile<<"El número ingresado no es primo"<< std::endl;
 }
 	outfile.close();
 }
