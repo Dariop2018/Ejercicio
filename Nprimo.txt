@@ -1,29 +1,78 @@
 ﻿#include <iostream>
 #include <thread>
+
 #include<fstream>
+
 #include<conio.h>
-#include <stdio.h>
-#include <stdlib.h>
+
+#include <pthread.h>
+
+#include <unistd.h>
+
+#include<windows.h>
+
+#include <string.h>
+
+int numero;
+
+int i;
+
+void *Nprimo(void*);
+
+int contador=0;
 
 void hilo(){
-	int con=0,num,i;
-	std::ofstream outfile("primo.txt");
-	printf ("Ingrese un numero: ");
-        scanf ("%i",&num);
-    for (i=1; i <=num; i++){
-        if (num%i==0){
-            con++;
-        }
-    }
-	 if (con==2){
-	 outfile<<"El número es primo"<< std::endl;
-         }else {
-         outfile<<"El número no es primo"<< std::endl;
-         }
-	 outfile.close();
+
+std::ofstream outfile("Jonathan.txt");
+
+outfile<<"Es numero primo"<< std::endl;
+
+outfile.close();
+
 }
+
+
+void *Nprimo(void *tid)
+
+{
+
+printf( "Introduzca el numero" );
+
+printf("\n");
+
+scanf( "%d", &numero);
+
+printf("\n");
+
+}
+
 int main(){
-std::thread prueba(hilo);
-prueba.join();
-getch();
+
+int a = 1;
+
+pthread_t pthread_primo;
+
+pthread_create (&pthread_primo, NULL, Nprimo, (void *)i); pthread_join(pthread_primo, NULL);
+
+for(i=numero; i>0; i--)
+
+{
+
+if(numero%i==0)
+
+contador++;
+
 }
+
+if(contador==2)
+
+printf("El numero es primo");
+
+std::thread prueba(hilo);
+
+prueba.join();
+
+getch();
+
+}
+
